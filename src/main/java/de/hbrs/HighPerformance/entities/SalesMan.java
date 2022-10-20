@@ -1,10 +1,9 @@
 package de.hbrs.HighPerformance.entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.data.annotation.Id;
+
+import java.util.List;
 
 @Builder
 @AllArgsConstructor
@@ -13,11 +12,12 @@ import org.springframework.data.annotation.Id;
 public class SalesMan {
 
     @Id
-    private Long employeeId;
+    private Integer employeeId;
     private String firstName;
     private String middleName;
     private String lastName;
     private String fullName;
     private String jobTitle;    // TODO: verify if necessary
+    private List<EvaluationRecord> records;
 
 }

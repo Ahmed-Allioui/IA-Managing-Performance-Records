@@ -12,7 +12,7 @@ import org.springframework.data.annotation.Id;
 @Data
 public class EvaluationRecord {
     @Id
-    private Long goalId;
+    private Integer goalId;
     private String goalDescription;
     private Integer targetValue;
     private Integer actualValue;
