@@ -1,0 +1,28 @@
+IA Assignment 1-2:
+
+a) Please make suitable assumptions on the schema of the two collections.
+We had 2 variants:
+- first one: using 2 collection (with references)
+- second one: using embedded documents
+We have chosen embedded documents because its recommended by monogDB Team.
+According to mongoDB:
+Embedded documents are an efficient and clean way to store related data, especially data that’s regularly accessed together.
+In general, when designing schemas for MongoDB, you should prefer embedding by default, and use references and application-side or
+database-side joins only when they’re worthwhile. The more often a given workload can retrieve a single document and have all the
+data it needs, the more consistently high-performance your application will be.
+
+(SEE) --> https://www.mongodb.com/basics/embedded-mongodb
+
+b) Does the interface of the control class fulfill the CRUD pattern entirely?
+
+Salesman:
+- No, Read, Update and Delete are missing. We added them in our project accordingly under the following method names:
+- Read: readSalesMan(), readAllSalesMen()
+- Update: updateSalesMan()
+- Delete: deleteSalesMan(), deleteAllSalesMen()
+
+EvaluationRecord:
+- No, Create, Update and Delete. We added them in our project accordingly under the following method names:
+- Create: addPerformanceRecord()
+- Update: updatePerformanceRecord()
+- Delete: deletePerformanceRecord()
