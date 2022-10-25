@@ -37,8 +37,8 @@ public class CommandImpl implements Command {
         log.info("Initializing the database...");
         List<SalesMan> salesMen = Salesmen.generateSalesMen(salesmen, records);
         managePersonal.deleteAllSalesMen();
-        managePersonal.createAllSalesMen(salesMen);
-        log.info("Database initialized with " + salesmen + " Salesmen");
+        List<SalesMan> allSalesMen = managePersonal.createAllSalesMen(salesMen);
+        log.info("Database initialized with " + allSalesMen.size() + " Salesmen");
     }
 
     @ShellMethod(key = "get", value = "Get the Salesman with the ID [--employeeId].", group = SALESMAN)
@@ -117,8 +117,8 @@ public class CommandImpl implements Command {
                                      int employeeId) {
         log.info("Adding a record to the Salesman with ID " + employeeId + "...");
         EvaluationRecord record = EvaluationRecords.create(goalId, goalDescription, targetValue, actualValue, year);
-        managePersonal.addPerformanceRecord(record, employeeId);
-        log.info("Record added successfully");
+        long records = managePersonal.addPerformanceRecord(record, employeeId);
+        log.info(records + " Records added successfully");
     }
 
     @ShellMethod(key = "update-record", value = "Update record to the Salesman having the ID [--employeeId].",
@@ -132,8 +132,8 @@ public class CommandImpl implements Command {
                                         int employeeId) {
         log.info("Updating the record having the ID " + goalId + " for the Salesman with ID " + employeeId + "...");
         EvaluationRecord record = EvaluationRecords.create(goalId, goalDescription, targetValue, actualValue, year);
-        managePersonal.updatePerformanceRecord(record, employeeId);
-        log.info("Record added successfully");
+        long records = managePersonal.updatePerformanceRecord(record, employeeId);
+        log.info(records + " Records updated successfully");
     }
 
     @ShellMethod(
