@@ -7,29 +7,29 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public interface ManagePersonal {
+interface ManagePersonal {
 
-    public SalesMan readSalesMan( int sid );
+    SalesMan readSalesMan( int sid );
 
-    public List<SalesMan> readAllSalesMen();
+    List<SalesMan> readAllSalesMen();
 
-    public SalesMan createSalesMan(SalesMan record );
+    SalesMan createSalesMan(SalesMan record );
 
     List<SalesMan> createAllSalesMen(List<SalesMan> records);
 
-    public SalesMan updateSalesMan(SalesMan record );
+    SalesMan updateSalesMan(SalesMan record );
 
     void deleteSalesMan(int sid);
 
     void deleteAllSalesMen();
 
-    public List<EvaluationRecord> readEvaluationRecords(int sid );
+    List<EvaluationRecord> readEvaluationRecords(int sid );
 
-    public long addPerformanceRecord(EvaluationRecord record , int sid );
+    long addPerformanceRecord(EvaluationRecord record , int sid );
 
-    public long updatePerformanceRecord(EvaluationRecord record , int sid );
+    long updatePerformanceRecord(EvaluationRecord record , int sid );
 
-    public void deletePerformanceRecord(int rid , int sid );
+    void deletePerformanceRecord(int rid , int sid );
 
-    public List<SalesMan> querySalesMan(String attribute , String key );
+    List<SalesMan> querySalesMan(String attribute , String key );
 }
