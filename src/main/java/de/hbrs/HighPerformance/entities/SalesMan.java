@@ -19,5 +19,4 @@ public class SalesMan {
     private String fullName;
     private String jobTitle;    // TODO: verify if necessary
     private List<EvaluationRecord> records;
-
 }
