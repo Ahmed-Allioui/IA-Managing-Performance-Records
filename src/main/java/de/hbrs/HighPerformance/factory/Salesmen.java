@@ -14,6 +14,7 @@ public class Salesmen {
             String middleName,
             String lastName,
             String fullName,
+            String jobTitle,
             List<EvaluationRecord> records) {
         return SalesMan.builder()
                 .employeeId(employeeId)
@@ -21,6 +22,7 @@ public class Salesmen {
                 .middleName(middleName)
                 .lastName(lastName)
                 .fullName(fullName)
+                .jobTitle(jobTitle)
                 .records(records)
                 .build();
     }
@@ -33,6 +35,7 @@ public class Salesmen {
                     .employeeId(i)
                     .firstName("firstName_" + i)
                     .lastName("lastName_" + i)
+                    .jobTitle("Senior Salesman")
                     .records(listRecords)
                     .build());
         }

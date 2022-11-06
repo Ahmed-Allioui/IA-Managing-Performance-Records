@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-interface ManagePersonal {
+public interface ManagePersonal {
 
     SalesMan readSalesMan( int sid );
 

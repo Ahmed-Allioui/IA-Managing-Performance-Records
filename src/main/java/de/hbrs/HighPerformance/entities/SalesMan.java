@@ -17,5 +17,6 @@ public class SalesMan {
     private String middleName;
     private String lastName;
     private String fullName;
+    private String jobTitle;
     private List<EvaluationRecord> records;
 }
