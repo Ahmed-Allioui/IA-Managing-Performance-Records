@@ -30,6 +30,8 @@ If you started the shell command, you can:
 - execute commands by creating a file containing a set of commands:
   - `script <file-name>`
 
-
-
+  ### Swagger API
+- To access the swagger-ui you simply type the following URL int your browser:
+  - `http://localhost:8080/swagger-ui.html`
+- From there you can try out all available HTTP methods
 
