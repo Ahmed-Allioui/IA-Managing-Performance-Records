@@ -1,8 +1,7 @@
-# Integration architecture: Managing Performance Records
-## Assignment No. 2 (Software for managing Performance Records)
+## Integration architecture: Managing Performance Records
 
 ### Brief Introduction
-Managing Performance Records is a software which can be used to manage the CRUD Operation related to a Salesman and his performance records.
+Managing Performance Records is a software which can be used to manage the CRUD Operation related to a Salesman and his performance records as an academical project in the university Bonn-Rhein-Sieg of applied science.
 
 ### Requirements
 - MongoDB: running with default setting (if not possible the values of the following attributes can be overridden in the file application.yml)
